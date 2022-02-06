@@ -16,6 +16,8 @@ defmodule Elixery.Orders.Agent do
 
   def get(uuid), do: Agent.get(__MODULE__, &get_order(&1, uuid))
 
+  def index, do: Agent.get(__MODULE__, & &1)
+
   defp update_state(state, uuid, %Order{} = order), do: Map.put(state, uuid, order)
 
   defp get_order(state, uuid) do
