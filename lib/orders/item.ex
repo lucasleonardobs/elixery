@@ -35,7 +35,7 @@ defmodule Elixery.Orders.Item do
   defp build_item(:error, _description, _category, _quantity) do
     {
       :error,
-      "Invalid parameters"
+      "Invalid price"
     }
   end
 end

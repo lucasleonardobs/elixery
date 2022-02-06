@@ -40,7 +40,7 @@ defmodule Elixery.Orders.ItemTest do
 
       response = Item.build(description, category, unity_price, quantity)
 
-      expected_response = {:error, "Invalid parameters"}
+      expected_response = {:error, "Invalid price"}
 
       assert response == expected_response
     end
