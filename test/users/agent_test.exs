@@ -1,9 +1,9 @@
 defmodule Elixery.Users.AgentTest do
   use ExUnit.Case
 
-  alias Elixery.Users.Agent, as: UserAgent
-
   import Elixery.Factory
+
+  alias Elixery.Users.Agent, as: UserAgent
 
   describe "save/1" do
     setup do

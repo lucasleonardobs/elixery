@@ -1,9 +1,9 @@
 defmodule Elixery.Orders.AgentTest do
   use ExUnit.Case
 
-  alias Elixery.Orders.Agent, as: OrderAgent
-
   import Elixery.Factory
+
+  alias Elixery.Orders.Agent, as: OrderAgent
 
   describe "save/1" do
     setup do

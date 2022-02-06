@@ -1,9 +1,9 @@
 defmodule Elixery.Orders.OrderTest do
   use ExUnit.Case
 
-  alias Elixery.Orders.Order
-
   import Elixery.Factory
+
+  alias Elixery.Orders.Order
 
   describe "build/4" do
     test "when all params are valid, return an order" do

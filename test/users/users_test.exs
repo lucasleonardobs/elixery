@@ -1,9 +1,9 @@
 defmodule Elixery.Users.UserTest do
   use ExUnit.Case
 
-  alias Elixery.Users.User
-
   import Elixery.Factory
+
+  alias Elixery.Users.User
 
   describe "build/5" do
     test "when all params are, returns the user" do
