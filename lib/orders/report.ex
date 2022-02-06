@@ -13,7 +13,6 @@ defmodule Elixery.Orders.Report do
     OrderAgent.index()
     |> Map.values()
     |> Enum.map(&order_string(&1))
-    |> IO.inspect()
   end
 
   defp order_string(%Order{user_cpf: cpf, items: items, total_price: total_price}) do
