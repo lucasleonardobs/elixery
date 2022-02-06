@@ -16,5 +16,5 @@ defmodule Elixery.Users.User do
     }
   end
 
-  def build(_name, _email, _cpf, _age), do: {:error, "Invalid parameters"}
+  def build(_name, _email, _address, _cpf, _age), do: {:error, "Invalid parameters"}
 end
