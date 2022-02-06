@@ -33,8 +33,14 @@ defmodule Elixery.Users.CreateOrUpdateTest do
         address: "Rua dos Coqueiros",
         email: "lukita@coqueiro.com",
         cpf: "12345678900",
-        age: 19
+        age: 15
       }
+
+      response = CreateOrUpdate.call(params)
+
+      expected_response = {:error, "Invalid parameters"}
+
+      assert response == expected_response
     end
   end
 end
