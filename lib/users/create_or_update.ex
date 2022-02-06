@@ -14,6 +14,11 @@ defmodule Elixery.Users.CreateOrUpdate do
     |> save_user()
   end
 
-  def save_user({:ok, %User{} = user}), do: UserAgent.save(user)
+  def save_user({:ok, %User{} = user}) do
+    UserAgent.save(user)
+
+    {:ok, "User created or update with sucessful"}
+  end
+
   def save_user({:error, _reason} = error), do: error
 end
