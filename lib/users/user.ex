@@ -1,3 +1,5 @@
 defmodule Elixery.Users.User do
-  defstruct [:name, :email, :cpf, :age]
+  @keys [:name, :email, :cpf, :age]
+  @enforce_keys @keys
+  defstruct @keys
 end
