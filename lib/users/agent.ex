@@ -16,7 +16,7 @@ defmodule Elixery.Users.Agent do
   defp get_user(state, cpf) do
     case Map.get(state, cpf) do
       nil -> {:error, "User not found"}
-      user -> {:error, user}
+      user -> {:ok, user}
     end
   end
 end
