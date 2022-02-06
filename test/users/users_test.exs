@@ -3,6 +3,8 @@ defmodule Elixery.Users.UserTest do
 
   alias Elixery.Users.User
 
+  import Elixery.Factory
+
   describe "build/5" do
     test "when all params are, returns the user" do
       name = "Lucas Leonardo"
@@ -13,15 +15,7 @@ defmodule Elixery.Users.UserTest do
 
       response = User.build(name, email, address, cpf, age)
 
-      expected_response =
-        {:ok,
-         %User{
-           address: "Rua dos Coqueiros",
-           age: 19,
-           cpf: "12345678900",
-           email: "lukita@coqueiro.com",
-           name: "Lucas Leonardo"
-         }}
+      expected_response = {:ok, build(:user)}
 
       assert expected_response == response
     end
