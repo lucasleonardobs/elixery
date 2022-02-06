@@ -2,7 +2,7 @@ defmodule Elixery.Factory do
   use ExMachina
 
   alias Elixery.Users.User
-  alias Elixery.Orders.Item
+  alias Elixery.Orders.{Item, Order}
 
   def user_factory do
     %User{
@@ -20,6 +20,15 @@ defmodule Elixery.Factory do
       description: "Bobó de Camarão",
       quantity: 2,
       unity_price: %Decimal{coef: 1800, exp: -2, sign: 1}
+    }
+  end
+
+  def order_factory do
+    %Order{
+      delivery_address: "Rua dos Coqueiros",
+      items: build_list(2, :item),
+      total_price: Decimal.new("72.00"),
+      user_cpf: "12345678900"
     }
   end
 end
