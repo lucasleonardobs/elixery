@@ -3,10 +3,11 @@ defmodule Elixery.Users.User do
   @enforce_keys @keys
   defstruct @keys
 
-  def build(name, email, cpf, age) when age >= 18 and is_bitstring(cpf) do
+  def build(name, email, address, cpf, age) when age >= 18 and is_bitstring(cpf) do
     {
       :ok,
       %__MODULE__{
+        address: address,
         age: age,
         cpf: cpf,
         email: email,
